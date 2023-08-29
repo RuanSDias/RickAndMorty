@@ -1,0 +1,19 @@
+@font-face {
+    font-family: rick;
+    src: url(../public/get_schwifty.ttf);
+}
+
+.App .logo {
+    font-family: rick;
+    font-size: 10px;
+    text-align: center;
+    color: aqua;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: chartreuse;
+}
+
+.grid-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
