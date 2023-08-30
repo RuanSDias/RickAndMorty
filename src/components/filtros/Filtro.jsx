@@ -2,7 +2,9 @@ import React from 'react'
 
 const Filtro = () => {
   return (
-    <div>Filtro</div>
+    <div className="col-3">
+      <div>Filtro</div>
+    </div>
   )
 }
 

@@ -1,0 +1,11 @@
+.pagination {
+    justify-content: center;
+}
+
+.nextLabel {
+    background-color: blue;
+}
+
+.previousLabel {
+    background-color: blue;
+}
