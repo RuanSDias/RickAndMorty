@@ -1,31 +1,24 @@
-import React from 'react'
+import React from "react";
 
-const Cards = ({results}) => {
-    let personagem;
-    if(results){
-        personagem = results.map(({id, name, image, location, status}) => {
-            return(
-                <div key={id} className=''>
-                    <div className=''>
-                        <img style={{width: '100px', height: '100px'}} src={image} alt="" className="" />
-                        <div className="content">
-                            <div className="">{name}</div>
-                            <div className="">
-                                <div className="">Last Location</div>
-                                <div className="">{location.name}</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className=''>{status}</div>
-                </div>
-            )
-        });
-    } else {
-        personagem = "Personagem não encontrado";
-    }
+export default function Cards({ results }) {
   return (
-    <div className='col-4'>{personagem}</div>
-  )
+    <div className="col-4 justify-content-center teste">
+      <div className="">
+        <img
+          style={{ width: "150px", height: "150px" }}
+          src={results.image}
+          alt=""
+          className=""
+        />
+        <div className="">
+          <div className="">{results.name}</div>
+          <div className="">
+            <div className="">Last Location</div>
+            <div className="">{results.location.name}</div>
+          </div>
+        </div>
+      </div>
+      <div className="">{results.status}</div>
+    </div>
+  );
 }
-
-export default Cards
