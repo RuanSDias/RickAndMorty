@@ -2,10 +2,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import "./App.css";
 import Filtro from "./components/filtros/Filtro";
-import Cards from "./components/cards/Cards";
+import Cards from "./components/cards/Card";
 import { useEffect, useState } from "react";
 
 function App() {
+  
   const [numPag, setNumPag] = useState(1);
   const [caracterInfo, setcaracterInfo] = useState([]);
   const { info, results } = caracterInfo;
@@ -32,7 +33,7 @@ function App() {
           <div className="row">
             {results
               ? results.map((e, i) => (
-                  <Cards  results={e} />
+                  <Cards key={e.id}  results={e} />
                 ))
               : "Carregando"}
           </div>
