@@ -3,7 +3,7 @@ import React from 'react'
 const BotoesFiltro = ({ name, index, items, task, setNumPag}) => {
     return (
         <div>
-            <style jsx>
+            <style jsx = 'true'>
                 {`
                     .botoes:checked + label {
                         background-color: #0b5ed7;

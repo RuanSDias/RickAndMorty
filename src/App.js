@@ -6,8 +6,28 @@ import Cards from "./components/cards/Card";
 import { useEffect, useState } from "react";
 import Pagination from "./components/pagination/Pagination";
 import Pesquisa from "./components/pesquisa/Pesquisa";
+import Navbar from "./components/navbar/Navbar";
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Episodios from './paginas/Episodios';
+import Locais from './paginas/Locais';
 
 function App() {
+  return(
+    <Router>
+      <div className="App">
+        <Navbar/>
+      </div>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/episodios" element={<Episodios/>}/>
+        <Route path="/locais" element={<Locais/>}/>
+      </Routes>
+    </Router>
+  )
+}
+
+const Home = () => {
   
   const [numPag, setNumPag] = useState(1);
   const [caracterInfo, setcaracterInfo] = useState([]);
@@ -30,7 +50,9 @@ function App() {
   return (
     <div className="App">
       <div className="row">
-        <h1 className="logo text-center col-12 mt-4">Rick and Morty Wiki</h1>
+        <div className='text-center col-12 mt-4'>
+          
+        </div>
       </div>
       <div className="row text-center">
         <Pesquisa setNumPag={setNumPag} caracter={caracter} setCaracter={setCaracter}/>
