@@ -11,11 +11,14 @@ function App() {
   
   const [numPag, setNumPag] = useState(1);
   const [caracterInfo, setcaracterInfo] = useState([]);
-  const [caracter, setCaracter] = useState('')
+  const [caracter, setCaracter] = useState('');
+  const [status, setStatus] = useState('');
+  const [genero, setGenero] = useState('');
+  const [especie, setEspecie] = useState('')
 
   const { info, results } = caracterInfo;
 
-  const api = `https://rickandmortyapi.com/api/character/?page=${numPag}&name=${caracter}`;
+  const api = `https://rickandmortyapi.com/api/character/?page=${numPag}&name=${caracter}&status=${status}&gender=${genero}&species=${especie}`;
 
   useEffect(() => {
     (async function () {
@@ -34,14 +37,19 @@ function App() {
       </div>
 
       <div className="conteudo row mt-4 p-4">
-          <Filtro />
+          <Filtro 
+          setGenero={setGenero}
+          setStatus={setStatus}
+          setEspecie={setEspecie}
+          setNumPag={setNumPag}
+          />
         <div className="col-8">
           <div className="row">
             {results
               ? results.map((e, i) => (
                   <Cards key={e.id} results={e} />
                 ))
-              : "Carregando"}
+              : "Personagem não encontrado!"}
           </div>
         </div>
       </div>

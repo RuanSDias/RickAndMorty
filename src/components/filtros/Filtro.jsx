@@ -4,15 +4,24 @@ import Genero from './categorias/Genero'
 import Especie from './categorias/Especie'
 import Status from './categorias/Status'
 
-const Filtro = () => {
+const Filtro = ({ setNumPag, setGenero, setStatus, setEspecie }) => {
   return (
     <div className="col-3">
       <div className='text-center fw-bold fs-4 mb-1'>Filtro</div>
-      <div className="limparFiltro text-center text-primary text-decoration-underline mb-4">Limpar filtro</div>
+      <div 
+        className="limparFiltro text-center text-primary text-decoration-underline mb-4"
+        onClick={_ => {
+          setNumPag('');
+          setGenero('');
+          setStatus('');
+          setEspecie('');
+          window.location.reload(false);
+        }}
+      >Limpar filtro</div>
       <div className="accordion" id="accordionExample">
-        <Genero/>
-        <Status/>
-        <Especie/>
+        <Genero setGenero={setGenero} setNumPag={setNumPag}/>
+        <Status setStatus={setStatus} setNumPag={setNumPag}/>
+        <Especie setEspecie={setEspecie} setNumPag={setNumPag}/>
       </div>
     </div>
   )

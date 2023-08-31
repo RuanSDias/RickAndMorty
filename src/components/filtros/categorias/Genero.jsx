@@ -1,7 +1,10 @@
 import React from 'react'
 import BotoesFiltro from '../BotoesFiltro'
 
-const Genero = () => {
+const Genero = ({ setGenero, setNumPag }) => {
+    
+    const genero = ['male', 'female', 'genderless', 'unknown']
+
     return (
         <div className="accordion-item">
             <h2 className="accordion-header">
@@ -10,8 +13,17 @@ const Genero = () => {
                 </button>
             </h2>
             <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                <div className="accordion-body">
-                    <BotoesFiltro/>
+                <div className="accordion-body d-flex flex-wrap gap-3">
+                    {genero.map((items, index) => (
+                        <BotoesFiltro 
+                            key={index} 
+                            name={genero} 
+                            index={index} 
+                            items={items}
+                            task={setGenero}
+                            setNumPag={setNumPag}
+                        />
+                    ))}
                 </div>
             </div>
         </div>
