@@ -6,9 +6,8 @@ const Pesquisa = ({setCaracter, setNumPag}) => {
     <form onChange={e => {
         setNumPag(1);
         setCaracter(e.target.value);
-    }} className='d-flex gap-4 my-5' action="">
+    }} className='d-flex my-5' action="">
         <input type="text" placeholder='Procurar personagem'/>
-        <button onClick={e => {e.preventDefault()}} className='btn btn-primary fs-5'>Pesquisa</button>
     </form>
   )
 }

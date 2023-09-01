@@ -1,40 +1,53 @@
-import React from "react";
+import React from 'react'
 import './Card.css'
 
-const Cards = ({ results }) => {
-  return (
-    <div className="col-4 position-relative">
-      <div className="card mb-4">
-        <img
-          src={results.image}
-          className="img"
-          alt="Foto do personagem"
-        />
-        <div className="conteudo img-fluid">
-          <div className="fs-5 fw-bold mb-4">{results.name}</div>
-          <div className="">
-            <div className="fs-7">Last Location:</div>
-            <div className="fs-6">{results.location.name}</div>
+const Card = ({ results }) => {
+
+  let display;
+
+  if (results) {
+    display = results.map(e => {
+      return (
+        <div key={e.id} className="col-4">
+          <div className="card mb-4">
+            <img
+              src={e.image}
+              className="img img-fluid"
+              alt="Foto do personagem"
+            />
+            <div className="informacoes">
+              <div className="fs-5 fw-bold mb-4">{e.name}</div>
+              <div className="">
+                <div className="fs-7">Last Location:</div>
+                <div className="fs-6">{e.location.name}</div>
+              </div>
+            </div>
+            {(() => {
+              if (e.status === 'Alive') {
+                return (
+                  <div className="badge bg-success">{e.status}</div>
+                )
+              } else if (e.status === 'Dead') {
+                return (
+                  <div className="badge bg-danger">{e.status}</div>
+                )
+              } else {
+                return (
+                  <div className="badge bg-secondary">{e.status}</div>
+                )
+              }
+            })()}
           </div>
         </div>
-      </div>
-      {(() => {
-        if (results.status === 'Alive') {
-          return (
-            <div className="badge bg-success position-absolute">{results.status}</div>
-          )
-        } else if (results.status === 'Dead') {
-          return (
-          <div className="badge bg-danger position-absolute">{results.status}</div>
-          )
-        } else {
-          return (
-            <div className="badge bg-secondary position-absolute">{results.status}</div>
-          )
-        }
-      })()}
-    </div>
-  );
+      )
+    });
+  } else {
+    display = 'Personagem não encontrado'
+  }
+
+  return (
+    <>{display}</>
+  )
 }
 
-export default Cards
+export default Card

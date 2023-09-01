@@ -9,6 +9,7 @@
 
 .badge {
     top: 10px;
-    right: 20px;
+    right: 10px;
     font-size: 17px;
+    position: absolute;
 }
