@@ -16,3 +16,9 @@
     display: flex;
     justify-content: space-between; 
 }
+
+.active {
+    border-bottom: 3px solid #0b5ed7;
+    font-weight: bold;
+    color: #0b5ed7 !important;
+}
