@@ -9,3 +9,12 @@
 .previousLabel {
     background-color: blue;
 }
+
+@media (max-width: 768px) {
+    .prox, .ant {
+        display: none;
+    }
+    .pagination {
+        font-size: 14px;
+    }
+}

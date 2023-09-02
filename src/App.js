@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Episodios from './paginas/Episodios';
 import Locais from './paginas/Locais';
 import Card from "./components/cards/Card";
+import CardDetalhado from "./components/cards/CardDetalhado";
 
 function App() {
   return(
@@ -20,8 +21,11 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={<Home/>}/>
+        <Route path="/:id" element={<CardDetalhado/>}/>
         <Route path="/episodios" element={<Episodios/>}/>
+        <Route path="/episodios/:id" element={<CardDetalhado/>}/>
         <Route path="/locais" element={<Locais/>}/>
+        <Route path="/locais/:id" element={<CardDetalhado/>}/>
       </Routes>
     </Router>
   )
@@ -54,6 +58,11 @@ const Home = () => {
           
         </div>
       </div>
+
+      <div className="row">
+        <h1 className="text-center">Personagens</h1>
+      </div>
+
       <div className="row text-center">
         <Pesquisa setNumPag={setNumPag} caracter={caracter} setCaracter={setCaracter}/>
       </div>
@@ -65,9 +74,9 @@ const Home = () => {
           setEspecie={setEspecie}
           setNumPag={setNumPag}
           />
-        <div className="col-8">
+        <div className="col-lg-8 col-12">
           <div className="row">
-            <Card results={results} setNumPag={setNumPag}/>
+            <Card page='/' results={results} />
           </div>
         </div>
       </div>

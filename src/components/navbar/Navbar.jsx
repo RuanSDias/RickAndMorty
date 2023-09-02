@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-light navbar-light mb-4">
             <div className="container">
-                <Link to='/' className="fs-3 ubuntu navbar-brand">
+                <Link to='/' className="fs-3 ubuntu navbar-brand logo">
                     Rick and Morty Wiki
                 </Link>
                 <button 

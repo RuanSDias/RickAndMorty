@@ -1,14 +1,19 @@
 import React from 'react'
-import './Card.css'
+import { Link } from 'react-router-dom'
+import estilo from './Card.scss'
 
-const Card = ({ results }) => {
+const Card = ({ results, page }) => {
 
   let display;
 
   if (results) {
     display = results.map(e => {
       return (
-        <div key={e.id} className="col-4">
+        <Link 
+        to={`${page}${e.id}`} key={e.id} 
+        style={{textDecoration: 'none'}} 
+        className="col-lg-4 col-md-6 col-12 text-dark "
+        >
           <div className="card mb-4">
             <img
               src={e.image}
@@ -25,20 +30,20 @@ const Card = ({ results }) => {
             {(() => {
               if (e.status === 'Alive') {
                 return (
-                  <div className="badge bg-success">{e.status}</div>
+                  <div className={`${estilo.badge} position-absolute badge bg-success`}>{e.status}</div>
                 )
               } else if (e.status === 'Dead') {
                 return (
-                  <div className="badge bg-danger">{e.status}</div>
+                  <div className={`${estilo.badge} position-absolute badge bg-danger`}>{e.status}</div>
                 )
               } else {
                 return (
-                  <div className="badge bg-secondary">{e.status}</div>
+                  <div className={`${estilo.badge} position-absolute badge bg-secondary`}>{e.status}</div>
                 )
               }
             })()}
           </div>
-        </div>
+        </Link>
       )
     });
   } else {
