@@ -24,3 +24,22 @@
     text-shadow: 0px 0px 15px #b6fd43;
 }
 
+.abrir {
+    color: #b6fd43;
+    text-shadow: 0px 0px 15px #b6fd43;
+}
+
+.fechar{
+    color: #b6fd43;
+    text-shadow: 0px 0px 15px #b6fd43;
+}
+
+.abrir:hover {
+    text-shadow: 0px 0px 25px #b6fd43;
+    transition: all 0.2s ease-in-out;
+}
+
+.fechar:hover {
+    text-shadow: 0px 0px 25px #b6fd43;
+    transition: all 0.2s ease-in-out;
+}

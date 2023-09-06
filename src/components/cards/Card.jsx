@@ -12,7 +12,7 @@ const Card = ({ results, page }) => {
         <Link 
         to={`${page}${e.id}`} key={e.id} 
         style={{textDecoration: 'none'}} 
-        className="col-lg-4 col-md-6 col-12 text-dark "
+        className="col-lg-4 col-md-6 col-12 "
         >
           <div className="card mb-4">
             <img
@@ -23,7 +23,7 @@ const Card = ({ results, page }) => {
             <div className="informacoes">
               <div className="fs-5 fw-bold mb-4">{e.name}</div>
               <div className="">
-                <div className="fs-7">Last Location:</div>
+                <div className="fs-7 fw-bold">Last Location:</div>
                 <div className="fs-6">{e.location.name}</div>
               </div>
             </div>

@@ -7,7 +7,7 @@ const Navbar = () => {
         <nav className="navbar-expand-lg mb-4">
             <div className="row">
                 <div className='text-center mt-4 mb-2'>
-                    <Link to='/' className="navbar-brand logo col-lg-8 col-12">
+                    <Link to='/' className="navbar-brand logo col-lg-12 col-8">
                         Rick and Morty Wiki
                     </Link>
                 </div>
@@ -30,8 +30,8 @@ const Navbar = () => {
                             }
                         `}
                     </style>
-                    <i className="fa-solid fa-bars fw-bold text-dark abrir"></i>
-                    <i className="fa-solid fa-xmark fw-bold text-dark fechar"></i>
+                    <i className="fa-solid fa-bars fw-bold abrir"></i>
+                    <i className="fa-solid fa-xmark fw-bold fechar"></i>
                 </button>
                 <div className="collapse navbar-collapse justify-content-evenly" id="navbarNavAltMarkup">
                     <div className="navbar-nav fs-5 gap-5 mt-3 links">
