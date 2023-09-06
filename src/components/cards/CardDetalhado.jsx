@@ -7,8 +7,8 @@ const CardDetalhado = () => {
     let{ id } = useParams();
 
     const [caracterInfo, setcaracterInfo] = useState([]);
-    const { image, name, species, gender, status, location, origin, episode, type } = caracterInfo;
-
+    const { image, name, species, gender, status, location, origin, type, episode } = caracterInfo;
+    
     let api = `https://rickandmortyapi.com/api/character/${id}`;
 
     useEffect(() => {
@@ -74,8 +74,13 @@ const CardDetalhado = () => {
                     <div className="">
                         <span className="fw-bold">Tipo: </span>
                         <span className='sub'>{type === '' ? 'Unknown' : type}</span>  
-                        
                     </div>
+
+                    <div className="">
+                        <span className="fw-bold">Episodios: </span>
+                        <span className='sub'>{}</span>  
+                    </div>
+
                 </div>
             </div>
         </div>

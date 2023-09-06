@@ -8,8 +8,7 @@ const Episodios = () => {
   const [id, setId] = useState(1)
   const [info, setInfo] = useState([])
   const [results, setResults] = useState([])
-  const { air_date, name } = info;
-
+  const { air_date, name, episode } = info;
 
   const api = `https://rickandmortyapi.com/api/episode/${id}`
 
@@ -20,20 +19,24 @@ const Episodios = () => {
       setInfo(data);
 
       const characterList = await Promise.all(
-        data.characters.map((e) => {
+        data.characters.map( e => {
           return fetch(e).then((resp) => resp.json());
         })
       );
       setResults(characterList);
     })()
   }, [api])
+
   return (
     <div className='container'>
       <div className='row'>
-        <h1 className="info text-center mb-4">
+        <h1 className="info text-center mb-1">
           Episódio: {name === '' ? "Episódio desconhecido" : name}
         </h1>
-        <h5 className="info text-center">
+        <h2 className='info text-center mb-4'>
+          {episode}
+        </h2>
+        <h5 className="info text-center mb-4">
           Data de exibição = {air_date === '' ? 'Data desconhecida' : air_date}
         </h5>
       </div>

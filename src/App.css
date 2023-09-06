@@ -1,6 +1,8 @@
-@font-face {
-    font-family: rick;
-    src: url(../public/get_schwifty.ttf);
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('./components/assets/bg3.png');
+    font-family: itim;
 }
 
 .App .logo {
@@ -25,12 +27,16 @@
     justify-content: space-between; 
 }
 
-body {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-image: url('./components/assets/bg3.png');
-}
-
 .pers {
     color: #f1f1ef;
+}
+
+@font-face {
+    font-family: rick;
+    src: url(../public/get_schwifty.ttf);
+}
+
+@font-face {
+    font-family: itim;
+    src: url('../public/Itim-Regular.ttf');
 }
