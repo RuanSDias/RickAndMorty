@@ -1,0 +1,26 @@
+.links {
+    color: #f1f1ef;
+}
+
+.per:hover {
+    text-shadow: 0px 0px 15px #b6fd43;
+    transition: all 0.1s ease-in-out;
+}
+
+.ep:hover {
+    text-shadow: 0px 0px 15px #b6fd43;
+    transition: all 0.1s ease-in-out;
+}
+
+.loc:hover {
+    text-shadow: 0px 0px 15px #b6fd43;
+    transition: all 0.1s ease-in-out;
+}
+
+.links a.active {
+    border-bottom: 3px solid #b6fd43;
+    font-weight: bold;
+    color: #b6fd43 !important;
+    text-shadow: 0px 0px 15px #b6fd43;
+}
+

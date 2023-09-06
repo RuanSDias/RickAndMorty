@@ -2,12 +2,31 @@
     justify-content: center;
 }
 
-.nextLabel {
-    background-color: blue;
+.pagination .btn {
+    background-color: #b2df28;
+    border-color: #00b5cc;
+    color: #2a1734;
+    font-weight: bold;
+    border-width: 2px;
 }
 
-.previousLabel {
-    background-color: blue;
+.Anterior {
+    margin-top: 100px;
+}
+
+.page-link {
+    color: #2a1734;
+    background-color: #f1f1ef;
+    border-color: #00b5cc;
+}
+
+.active .page-link{
+    background-color: #b2df28;
+    color: #2a1734;
+}
+
+.break {
+    color: white;
 }
 
 @media (max-width: 768px) {

@@ -6,24 +6,31 @@
 .App .logo {
     font-family: rick;
     font-size: 119px;
-    color: #00c5bc;
+    margin-right: 25px;
+    margin-left: 25px;
+    color: #00b5cc;
     -webkit-text-stroke: 2px #053a3d;
-    text-shadow: 3px 3px #b2df28, -3px -3px #b2df28, -3px 3px #b2df28, 3px -3px #b2df28, 0px -5px #b2df28, 0px 5px #b2df28;
+    text-shadow: 3px 3px #b2df28, 
+                -3px -3px #b2df28, 
+                -3px 3px #b2df28, 
+                3px -3px #b2df28, 
+                0px -5px #b2df28, 
+                0px 5px #b2df28,
+                -3px 0px #b2df28;
 }
+
 .grid-container {
     width: 100%;
     display: flex;
     justify-content: space-between; 
 }
 
-.active {
-    border-bottom: 3px solid #0b5ed7;
-    font-weight: bold;
-    color: #0b5ed7 !important;
-}
-
 body {
         background-size: cover;
         background-repeat: no-repeat;
-        background-image: url('./components/assets/bg2.png');
+        background-image: url('./components/assets/bg3.png');
+}
+
+.pers {
+    color: #f1f1ef;
 }

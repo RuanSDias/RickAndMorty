@@ -17,11 +17,11 @@ const Pagination = ({info, numPag, setNumPag}) => {
 
   return (
       <ReactPaginate 
-        className='pagination gap-4 my-4 justify-content-center' 
+        className='pagination gap-4 my-4 justify-content-center'
         previousLabel='Anterior' 
         nextLabel='Proximo'
-        previousClassName='previousLabel ant'
-        nextClassName='nextLabel prox'
+        previousLinkClassName='btn ant'
+        nextLinkClassName='btn btn-primary prox'
         pageClassName='page-item'
         pageLinkClassName='page-link'
         activeClassName='active'

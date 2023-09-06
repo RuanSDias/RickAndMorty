@@ -52,7 +52,7 @@ const Home = () => {
   }, [api, setcaracterInfo]);
 
   return (
-    <div className="App">
+    <div className="">
       <div className="row">
         <div className='text-center col-12 mt-4'>
           
@@ -60,7 +60,7 @@ const Home = () => {
       </div>
 
       <div className="row">
-        <h1 className="text-center">Personagens</h1>
+        <h1 className="pers text-center">Personagens</h1>
       </div>
 
       <div className="row text-center">
